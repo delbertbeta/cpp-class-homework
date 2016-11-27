@@ -45,7 +45,7 @@ int main()
 {
     vector<Car> Cars;
     int id = 1;
-    while (1)
+    while (true)
     {
         cout << "Please input the hours for Car " << id << " (Ctrl + Z or Ctrl + D to quit input): ";
         double hours;
@@ -68,7 +68,7 @@ int main()
     {
         double thisHours = (*iter).getHours();
         double thisCharge = (*iter).calculateCharges();
-        cout << (*iter).getId() << "\t" << fixed << setprecision(1) << thisHours << "\t" << fixed << setprecision(2) << thisCharge << endl;
+        cout << fixed << setprecision(0) << (*iter).getId() << "\t" << fixed << setprecision(1) << thisHours << "\t" << fixed << setprecision(2) << thisCharge << endl;
         totalCharge += thisCharge;
         totalHours += thisHours;
         iter++;
