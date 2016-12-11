@@ -22,10 +22,11 @@ int main()
 		for (int column = 0; column <= 7; column++)
 		{
 			int currentRow = row, currentColumn = column;
+			board[currentRow][currentColumn] = true;
 			cout << "Begins at (" << currentRow << ", " << currentColumn << ")" << endl;
 			cout << "(" << currentRow << ", " << currentColumn << ") ";
 			int littlestMoveNumber = findLittlestAccessibility(board, accessibility, currentRow, currentColumn);
-			int counter = 0;
+			int counter = 1;
 			do
 			{
 				currentRow += horizontal[littlestMoveNumber];
@@ -40,7 +41,6 @@ int main()
 			cout << counter << " steps in all.\n" << endl;
 			initBoard(board);
 		}
-
 	}
 	return 0;
 }
