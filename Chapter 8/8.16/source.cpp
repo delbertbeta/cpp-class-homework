@@ -129,7 +129,7 @@ void mazeTraverse(char maze[12][12], int startPointX, int startPointY, string di
 
 void print(char maze[12][12], int startPointX, int startPointY, string direction)
 {
-	Sleep(500);
+	Sleep(200);
 	system("cls");
 	for (int i = 0; i < 12; i++)
 	{

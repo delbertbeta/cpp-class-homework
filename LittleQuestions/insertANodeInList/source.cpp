@@ -4,7 +4,6 @@ using namespace std;
 
 struct Node
 {
-    Node* head;
     int data;
     Node* after;
 };
@@ -16,7 +15,6 @@ int main()
     for (int i = 1; i <= 10; i++)
     {
         linkedList->data = i;
-        linkedList->head = head;
         linkedList->after = new Node;
         linkedList = linkedList->after;
     }
@@ -26,9 +24,26 @@ int main()
         cout << linkedList->data << "\t";
         linkedList = linkedList->after;
     }
-    cout << "\nNow insert a Node before the first Node" << endl;
-    Node* newNode = new Node;
+    cout << endl;
     linkedList = head;
-    linkedList->
+    cout << "Choose a node to insert another node before it: ";
+    int nodeIndex;
+    cin >> nodeIndex;
+    for (int i = 1; i < nodeIndex; i++)
+    {
+        linkedList = linkedList->after;
+    }
+    Node* nextNode = linkedList->after;
+    Node* newNode = new Node;
+    cout << "Input the data for new node: ";
+    cin >> newNode->data;
+    newNode->after = nextNode;
+    linkedList->after = newNode;
+    linkedList = head;
+    while (linkedList->after != NULL)
+    {
+        cout << linkedList->data << "\t";
+        linkedList = linkedList->after;
+    }
     return 0;
 }

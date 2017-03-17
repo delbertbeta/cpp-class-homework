@@ -1,0 +1,12 @@
+{
+    "files.associations": {
+        "*.html": "html",
+        "iostream": "cpp",
+        "utility": "cpp",
+        "stdexcept": "cpp",
+        "xutility": "cpp",
+        "ostream": "cpp",
+        "iosfwd": "cpp",
+        "xlocale": "cpp"
+    }
+}
